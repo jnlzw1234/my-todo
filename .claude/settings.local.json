@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:my-todo-lzw1.vercel.app)",
+      "Bash(winget install *)",
+      "Bash(npm install *)",
+      "Bash(curl -sL \"https://api.github.com/repos/cli/cli/releases/latest\" -H \"Accept: application/vnd.github+json\")",
+      "Bash(powershell -Command \"Invoke-WebRequest -Uri 'https://github.com/cli/cli/releases/download/v2.92.0/gh_2.92.0_windows_amd64.zip' -OutFile 'C:\\\\Users\\\\pc\\\\AppData\\\\Local\\\\Temp\\\\gh.zip' -TimeoutSec 120\")",
+      "Bash(unzip -o \"C:/Users/pc/AppData/Local/Temp/gh.zip\" -d \"C:/Users/pc/AppData/Local/gh_cli\")",
+      "Read(//c/Users/pc/AppData/Local/**)",
+      "Bash(powershell *)"
+    ]
+  }
+}
