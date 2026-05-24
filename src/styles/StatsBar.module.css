@@ -1,0 +1,31 @@
+.stats {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.statItem {
+  background: var(--card-bg);
+  border-radius: var(--radius-sm);
+  padding: 12px 20px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  min-width: 80px;
+}
+
+.num {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.overdue .num {
+  color: var(--danger);
+}
+
+.label {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}

@@ -1,0 +1,50 @@
+.toolbar {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.searchInput {
+  flex: 1;
+  min-width: 140px;
+  padding: 8px 12px;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  outline: none;
+}
+
+.searchInput:focus {
+  border-color: var(--primary);
+}
+
+.filterGroup {
+  display: flex;
+  gap: 2px;
+  background: var(--card-bg);
+  border-radius: var(--radius-sm);
+  padding: 3px;
+  box-shadow: var(--shadow);
+}
+
+.filterBtn {
+  padding: 6px 14px;
+  border: none;
+  background: transparent;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  color: var(--text-secondary);
+  font-weight: 500;
+  transition: all 0.15s;
+}
+
+.filterBtn:hover:not(.active) {
+  color: var(--text);
+}
+
+.active {
+  background: var(--primary);
+  color: #fff;
+}

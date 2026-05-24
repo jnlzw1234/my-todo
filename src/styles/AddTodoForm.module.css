@@ -1,0 +1,69 @@
+.addForm {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+}
+
+.titleInput {
+  flex: 1;
+  padding: 10px 14px;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.titleInput:focus {
+  border-color: var(--primary);
+}
+
+.row select,
+.row input[type='date'] {
+  padding: 10px 12px;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  outline: none;
+  background: #fff;
+  cursor: pointer;
+  color: var(--text);
+  min-width: 0;
+  flex: 1;
+}
+
+.row select:focus,
+.row input[type='date']:focus {
+  border-color: var(--primary);
+}
+
+.submitBtn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  background: var(--primary);
+  color: #fff;
+  transition: all 0.15s;
+}
+
+.submitBtn:hover {
+  background: var(--primary-hover);
+}
+
+@media (max-width: 480px) {
+  .row {
+    flex-direction: column;
+  }
+}

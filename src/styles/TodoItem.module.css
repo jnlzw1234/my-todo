@@ -1,0 +1,199 @@
+.todoItem {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.2s;
+  cursor: grab;
+  border-left: 4px solid transparent;
+  animation: slideIn 0.25s ease;
+}
+
+.todoItem:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.completed {
+  opacity: 0.6;
+}
+
+.completed .todoTitle {
+  text-decoration: line-through;
+  color: var(--text-secondary);
+}
+
+.dragging {
+  opacity: 0.5;
+  transform: scale(0.98);
+}
+
+.dragOver {
+  border-color: var(--primary) !important;
+  background: #eef2ff;
+}
+
+.editing .todoContent,
+.editing .todoActions {
+  display: none;
+}
+
+/* 复选框 */
+.checkbox {
+  width: 22px;
+  height: 22px;
+  border: 2px solid #d1d5db;
+  border-radius: 50%;
+  cursor: pointer;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+}
+
+.checkbox:hover {
+  border-color: var(--primary);
+}
+
+.checked {
+  background: var(--success);
+  border-color: var(--success);
+}
+
+.checked::after {
+  content: '✓';
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* 内容区 */
+.todoContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.todoTitle {
+  font-size: 15px;
+  font-weight: 500;
+  word-break: break-word;
+}
+
+/* 元信息 */
+.todoMeta {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.tag {
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 11px;
+}
+
+.dueDate {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+/* 操作按钮 */
+.todoActions {
+  display: flex;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.todoActions button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--text-secondary);
+  transition: all 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todoActions button:hover {
+  background: var(--bg);
+}
+
+.btnDelete:hover {
+  color: var(--danger) !important;
+  background: #fef2f2 !important;
+}
+
+.btnEdit:hover {
+  color: var(--primary) !important;
+  background: #eef2ff !important;
+}
+
+/* 编辑表单 */
+.editForm {
+  display: none;
+  flex: 1;
+  gap: 8px;
+  align-items: center;
+}
+
+.editing .editForm {
+  display: flex;
+}
+
+.editForm input {
+  flex: 1;
+  padding: 6px 10px;
+  border: 2px solid var(--primary);
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+}
+
+.editBtnPrimary {
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 6px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  background: var(--primary);
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.editBtnGhost {
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 6px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  background: transparent;
+  color: var(--text-secondary);
+  flex-shrink: 0;
+}
+
+.editBtnGhost:hover {
+  background: var(--bg);
+  color: var(--text);
+}
+
+@media (max-width: 480px) {
+  .todoItem {
+    padding: 10px 12px;
+    gap: 8px;
+  }
+}
